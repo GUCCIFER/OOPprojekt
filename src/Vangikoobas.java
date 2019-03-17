@@ -33,15 +33,15 @@ public class Vangikoobas {
                 JOptionPane.QUESTION_MESSAGE));
     }
     public static Relv pahalaseRelv(){
-        return new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")));
+        return new Relv( sisestus("Sisetage oma tegelase nimi"),intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage om,a tegelase elud"),intSisestus("Sisetage oma tegelase elud"),intSisestus("Sisetage oma tegelase elud"));
     }
     public static void main(String[] args) {
         System.out.println("TUTORIAL");
         List<Tegelane> pahalased = new ArrayList<>();
-        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), parseInt(sisestus("Sisetage oma tegelase kaitse tase")));
-        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud"))));
+        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase"));
+        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma Relva"),intSisestus("Sisetage mitu korda relvaga lööd(1-3)"), intSisestus("Sisetage oma relva tugevus(1-12"),intSisestus("Sisetage oma relva baastugevus(1-3)"),intSisestus("Sisetage oma relva täpsus(1-7)")));
         for (int i = 0; i < intSisestus("Sisestage vastaste arv"); i++) {
-            pahalased.add(new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), parseInt(sisestus("Sisetage oma tegelase kaitse tase")), pahalaseRelv()));
+            pahalased.add(new Tegelane(sisestus("Sisetage oma pahalase nimi"), intSisestus("Sisetage pahalase elud"), intSisestus("Sisetage pahalase kaitse tase"), pahalaseRelv()));
         }
     }
 }
