@@ -23,7 +23,7 @@ public class Vangikoobas {
         if (kasSaabPihta(relv, tegelane)){
             int kahju = löögiDamage(relv);
             tegelane.setElud(tegelane.getElud()-kahju);
-            System.out.println(tegelane.getTegelane() + "sai " + kahju + " punkti kahju ja tal on nüüd " + tegelane.getElud() + " elu" );
+            System.out.println(tegelane.getTegelane() + " sai " + kahju + " punkti kahju ja tal on nüüd " + tegelane.getElud() + " elu" );
         }
     }
     public static String sisestus(String message){
@@ -49,7 +49,7 @@ public class Vangikoobas {
         while (pahalased.size() != 0 && peaTegelane.getElud() > 0){
             String target = sisestus("Keda sa ründad?");
             for (Tegelane pahalane: pahalased){
-                if (pahalane.getTegelane().equals(target)){
+                if (pahalane.getTegelane().toLowerCase().equals(target.toLowerCase())){
                     Löök(peaTegelane.getRelv(), pahalane);
                     if (pahalane.getElud() < 1){
                         pahalased.remove(pahalane);
