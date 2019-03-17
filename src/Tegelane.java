@@ -12,6 +12,12 @@ public class Tegelane {
         this.elud = elud;
         this.kaitse = kaitse;
     }
+    public Tegelane(String tegelane, int elud, int kaitse, Relv relv) {
+        this.tegelane = tegelane;
+        this.elud = elud;
+        this.kaitse = kaitse;
+        this.relv = relv;
+    }
 
     public Relv getRelv() {
         return relv;
