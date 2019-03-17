@@ -27,7 +27,7 @@ public class Vangikoobas {
     }
     public static void main(String[] args) {
         System.out.println("TUTORIAL");
-        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), parseInt(sisestus("Sisetage oma tegelase elud")), parseInt(sisestus("Sisetage oma tegelase kaitse tase")));
-        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud"))));
+        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), parseInt(sisestus("Sisetage oma tegelase elud")), parseInt(sisestus("Sisetage oma tegelase kaitse tase(8-20)")));
+        peaTegelane.setRelv(new Relv(sisestus("Sisetage oma relva nimi"),Integer.parseInt(sisestus("Sisetage mitu korda lööte(1-3)")), Integer.parseInt(sisestus("Sisetage oma relva tugevus(4-12)")),Integer.parseInt(sisestus("Sisetage relva baasdamage(1-3)")),Integer.parseInt(sisestus("Sisetage oma relva täpsus(1-7)"))));
     }
 }
