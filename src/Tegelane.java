@@ -1,20 +1,34 @@
 public class Tegelane {
     private String tegelane;
     private int elud;
-    private int armorClass;
+    private int kaitse;
 
-    public int getArmorClass() {
-        return armorClass;
-    }
-    public int getElud() {
-        return elud;
-    }
     public void setElud(int elud) {
         this.elud = elud;
     }
-    public Tegelane(String tegelane, int elud, int armorClass) {
+    public Tegelane(String tegelane, int elud, int kaitse) {
         this.tegelane = tegelane;
         this.elud = elud;
-        this.armorClass = armorClass;
+        this.kaitse = kaitse;
+    }
+
+    public String getTegelane() {
+        return tegelane;
+    }
+
+    public void setTegelane(String tegelane) {
+        this.tegelane = tegelane;
+    }
+
+    public int getElud() {
+        return elud;
+    }
+
+    public int getKaitse() {
+        return kaitse;
+    }
+
+    public void setKaitse(int kaitse) {
+        this.kaitse = kaitse;
     }
 }
