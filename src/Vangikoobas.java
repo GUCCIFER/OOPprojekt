@@ -1,5 +1,8 @@
 import javax.swing.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static java.lang.Integer.parseInt;
 
 public class Vangikoobas {
@@ -25,9 +28,17 @@ public class Vangikoobas {
         return JOptionPane.showInputDialog(null, message, "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE);
     }
+    public static int intSisestus(String message){
+        return Integer.parseInt(JOptionPane.showInputDialog(null, message, "Andmete sisestamine",
+                JOptionPane.QUESTION_MESSAGE));
+    }
     public static void main(String[] args) {
         System.out.println("TUTORIAL");
-        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), parseInt(sisestus("Sisetage oma tegelase elud")), parseInt(sisestus("Sisetage oma tegelase kaitse tase(8-20)")));
-        peaTegelane.setRelv(new Relv(sisestus("Sisetage oma relva nimi"),Integer.parseInt(sisestus("Sisetage mitu korda lööte(1-3)")), Integer.parseInt(sisestus("Sisetage oma relva tugevus(4-12)")),Integer.parseInt(sisestus("Sisetage relva baasdamage(1-3)")),Integer.parseInt(sisestus("Sisetage oma relva täpsus(1-7)"))));
+        List<Tegelane> pahalased = new ArrayList<>();
+        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), parseInt(sisestus("Sisetage oma tegelase kaitse tase")));
+        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud"))));
+        for (int i = 0; i < ; i++) {
+
+        }
     }
 }
