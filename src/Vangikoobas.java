@@ -32,13 +32,16 @@ public class Vangikoobas {
         return Integer.parseInt(JOptionPane.showInputDialog(null, message, "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE));
     }
+    public static Relv pahalaseRelv(){
+        return new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")));
+    }
     public static void main(String[] args) {
         System.out.println("TUTORIAL");
         List<Tegelane> pahalased = new ArrayList<>();
         Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), parseInt(sisestus("Sisetage oma tegelase kaitse tase")));
         peaTegelane.setRelv(new Relv( sisestus("Sisetage oma tegelase nimi"),Integer.parseInt(sisestus("Sisetage oma tegelase elud")), Integer.parseInt(sisestus("Sisetage om,a tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud")),Integer.parseInt(sisestus("Sisetage oma tegelase elud"))));
-        for (int i = 0; i < ; i++) {
-
+        for (int i = 0; i < intSisestus("Sisestage vastaste arv"); i++) {
+            pahalased.add(new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), parseInt(sisestus("Sisetage oma tegelase kaitse tase")), pahalaseRelv()));
         }
     }
 }
