@@ -4,12 +4,12 @@ public class Vangikoobas {
     public int löögiDamage(Relv relv){
         int tehtavKahju = relv.getBaasDamage();
         for (int i = 0; i < relv.getTäringuteArv(); i++){
-            tehtavKahju += ((int)(Math.random())*relv.getTärginuTahkudeArv());
+            tehtavKahju += 1+(((int)(Math.random())*relv.getTärginuTahkudeArv()));
         }
         return  tehtavKahju;
     }
     public boolean kasSaabPihta(Relv relv, Tegelane tegelane){
-        if ((int) (Math.random()*21) + relv.getTäpsus() > tegelane.getKaitse()){
+        if ((int) (Math.random()*20) + relv.getTäpsus() + 1 > tegelane.getKaitse()){
             return true;
         }
         return false;
