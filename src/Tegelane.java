@@ -6,15 +6,12 @@ public class Tegelane {
     public int getArmorClass() {
         return armorClass;
     }
-
     public int getElud() {
         return elud;
     }
-
     public void setElud(int elud) {
         this.elud = elud;
     }
-
     public Tegelane(String tegelane, int elud, int armorClass) {
         this.tegelane = tegelane;
         this.elud = elud;
