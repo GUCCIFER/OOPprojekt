@@ -21,8 +21,9 @@ public class Vangikoobas {
         List<Tegelane> pahalased = new ArrayList<>();
         Relv scimmi = new Relv("Scimitar", 5, 5);
         Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase"));
-        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma Relva"),intSisestus("Sisetage mitu korda relvaga lööd(1-3)"), intSisestus("Sisetage oma relva täpsus(1-12")));
-        for (int i = 0; i < intSisestus("Sisestage vastaste arv"); i++) {
+        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma Relva nimi"),intSisestus("Sisetage mitu korda relvaga lööd(1-3)"), intSisestus("Sisetage oma relva täpsus(1-12")));
+        int pahalasteArv = intSisestus("Sisestage vastaste arv");
+        for (int i = 0; i < pahalasteArv; i++) {
             pahalased.add(new Tegelane(sisestus("Sisetage oma pahalase nimi"), intSisestus("Sisetage pahalase elud"), intSisestus("Sisetage pahalase kaitse tase"), scimmi));
         }
         while (pahalased.size() != 0 && peaTegelane.getElud() > 0){

@@ -4,7 +4,7 @@ public class Tegelane {
     private int kaitse;
     private Relv relv;
     public int löögiDamage(){
-        return  1+(int)(Math.random())*relv.getVõimsus();
+        return  1+(int)((Math.random())*relv.getVõimsus());
     }
     boolean kasSaabPihta(Tegelane tegelane){
         if ((int) (Math.random()*20) + relv.getTäpsus() + 1 > tegelane.getKaitse()){
