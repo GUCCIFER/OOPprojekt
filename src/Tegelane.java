@@ -2,6 +2,7 @@ public class Tegelane {
     private String tegelane;
     private int elud;
     private int kaitse;
+    private Relv relv;
 
     public void setElud(int elud) {
         this.elud = elud;
@@ -10,6 +11,14 @@ public class Tegelane {
         this.tegelane = tegelane;
         this.elud = elud;
         this.kaitse = kaitse;
+    }
+
+    public Relv getRelv() {
+        return relv;
+    }
+
+    public void setRelv(Relv relv) {
+        this.relv = relv;
     }
 
     public String getTegelane() {
