@@ -1,14 +1,10 @@
 public class Relv {
     private String nimi;
-    private int täringuteArv;
-    private int tärginuTahkudeArv;
-    private int baasDamage;
+    private int võimsus;
     private int täpsus;
-    public Relv(String nimi, int täringuteArv, int tärginuTahkudeArv, int baasDamage, int täpsus) {
+    public Relv(String nimi, int võimsus, int täpsus) {
         this.nimi = nimi;
-        this.täringuteArv = täringuteArv;
-        this.tärginuTahkudeArv = tärginuTahkudeArv;
-        this.baasDamage = baasDamage;
+        this.võimsus = võimsus;
         this.täpsus = täpsus;
     }
 
@@ -20,28 +16,12 @@ public class Relv {
         this.nimi = nimi;
     }
 
-    public int getTäringuteArv() {
-        return täringuteArv;
+    public int getVõimsus() {
+        return võimsus;
     }
 
-    public void setTäringuteArv(int täringuteArv) {
-        this.täringuteArv = täringuteArv;
-    }
-
-    public int getTärginuTahkudeArv() {
-        return tärginuTahkudeArv;
-    }
-
-    public void setTärginuTahkudeArv(int tärginuTahkudeArv) {
-        this.tärginuTahkudeArv = tärginuTahkudeArv;
-    }
-
-    public int getBaasDamage() {
-        return baasDamage;
-    }
-
-    public void setBaasDamage(int baasDamage) {
-        this.baasDamage = baasDamage;
+    public void setVõimsus(int võimsus) {
+        this.võimsus = võimsus;
     }
 
     public int getTäpsus() {

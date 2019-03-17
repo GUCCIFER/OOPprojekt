@@ -3,6 +3,22 @@ public class Tegelane {
     private int elud;
     private int kaitse;
     private Relv relv;
+    public int löögiDamage(){
+        return  1+(int)(Math.random())*relv.getVõimsus();
+    }
+    boolean kasSaabPihta(Tegelane tegelane){
+        if ((int) (Math.random()*20) + relv.getTäpsus() + 1 > tegelane.getKaitse()){
+            return true;
+        }
+        return false;
+    }
+    public void Löök(Tegelane ohver){
+        if (kasSaabPihta(ohver)){
+            int kahju = löögiDamage();
+            ohver.setElud(ohver.getElud()-kahju);
+            System.out.println(this.getTegelane() + " ründas ja " + ohver.getTegelane() + " sai " + kahju + " punkti kahju ja tal on nüüd " + ohver.getElud() + " elu" );
+        }
+    }
 
     public void setElud(int elud) {
         this.elud = elud;
