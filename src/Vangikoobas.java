@@ -27,6 +27,15 @@ public class Vangikoobas {
             pahalased.add(new Tegelane(sisestus("Sisetage oma pahalase nimi"), intSisestus("Sisetage pahalase elud"), intSisestus("Sisetage pahalase kaitse tase"), scimmi));
         }
         while (pahalased.size() != 0 && peaTegelane.getElud() > 0){
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Peategelane:");
+            System.out.println(peaTegelane + "||Kaitsetase: " + peaTegelane.getKaitse() + "||Elud: " + peaTegelane.getElud());
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Pahalaste list:");
+            for (Tegelane pahalane: pahalased) {
+
+                System.out.println(pahalane + "||Kaitsetase: " + pahalane.getKaitse() + "||Elud: " + pahalane.getElud());
+            }
             String target = sisestus("Keda sa ründad?");
             for (Tegelane pahalane: pahalased){
                 if (pahalane.getTegelane().toLowerCase().equals(target.toLowerCase())){
