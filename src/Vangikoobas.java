@@ -5,55 +5,59 @@ import java.util.List;
 public class Vangikoobas {
 
 
-    public static String sisestus(String message){
+    public static String sisestus(String message) {
         return JOptionPane.showInputDialog(null, message, "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE);
     }
-    public static int intSisestus(String message){
+
+    public static int intSisestus(String message) {
         return Integer.parseInt(JOptionPane.showInputDialog(null, message, "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE));
     }
-    public static Relv pahalaseRelv(){
-        return new Relv( sisestus("Sisetage pahalase relva nimi"),intSisestus("Sisetage pahalase relva täpsus"), intSisestus("Sisetage pahalase relva võimsus"));
+
+    public static Relv pahalaseRelv() {
+        return new Relv(sisestus("Sisetage pahalase relva nimi"), intSisestus("Sisetage pahalase relva täpsus"), intSisestus("Sisetage pahalase relva võimsus"));
     }
+
     public static void main(String[] args) {
         System.out.println("TUTORIAL");
         List<Tegelane> pahalased = new ArrayList<>();
         Relv scimmi = new Relv("Scimitar", 5, 5);
-        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase"));
-        peaTegelane.setRelv(new Relv( sisestus("Sisetage oma Relva nimi"),intSisestus("Sisetage mitu korda relvaga lööd(1-3)"), intSisestus("Sisetage oma relva täpsus(1-12")));
+        Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase (Vahemikus 8-20)"));
+        peaTegelane.setRelv(new Relv(sisestus("Sisetage oma Relva nimi"), intSisestus("Sisetage oma relva võimsus(4-20)"), intSisestus("Sisetage oma relva täpsus(Vahemikus 1-12)")));
         int pahalasteArv = intSisestus("Sisestage vastaste arv");
         for (int i = 0; i < pahalasteArv; i++) {
-            pahalased.add(new Tegelane(sisestus("Sisetage oma pahalase nimi"), intSisestus("Sisetage pahalase elud"), intSisestus("Sisetage pahalase kaitse tase"), scimmi));
+            pahalased.add(new Tegelane(sisestus("Sisetage oma pahalase nimi(Ärge lisage identseid nimesid mitme pahalase korral)"), intSisestus("Sisetage pahalase elud"), intSisestus("Sisetage pahalase kaitse tase"), scimmi));
         }
-        while (pahalased.size() != 0 && peaTegelane.getElud() > 0){
+        while (pahalased.size() != 0 && peaTegelane.getElud() > 0) {
             System.out.println("------------------------------------------------------------");
             System.out.println("Peategelane:");
             System.out.println(peaTegelane + "||Kaitsetase: " + peaTegelane.getKaitse() + "||Elud: " + peaTegelane.getElud());
             System.out.println("------------------------------------------------------------");
             System.out.println("Pahalaste list:");
-            for (Tegelane pahalane: pahalased) {
-
+            for (Tegelane pahalane : pahalased) {
                 System.out.println(pahalane + "||Kaitsetase: " + pahalane.getKaitse() + "||Elud: " + pahalane.getElud());
             }
+            System.out.println("------------------------------------------------------------");
             String target = sisestus("Keda sa ründad?");
-            for (Tegelane pahalane: pahalased){
-                if (pahalane.getTegelane().toLowerCase().equals(target.toLowerCase())){
+            for (Tegelane pahalane : pahalased) {
+                if (pahalane.getTegelane().toLowerCase().equals(target.toLowerCase())) {
                     peaTegelane.Löök(pahalane);
-                    if (pahalane.getElud() < 1){
+                    if (pahalane.getElud() < 1) {
+                        System.out.println("Võitsid!");
                         pahalased.remove(pahalane);
                     }
                     break;
                 }
 
             }
-            for (Tegelane pahalane: pahalased){
+            for (Tegelane pahalane : pahalased) {
                 pahalane.Löök(peaTegelane);
-                if (peaTegelane.getElud() < 1){
+                if (peaTegelane.getElud() < 1) {
+                    System.out.println("Said surma, mäng läbi");
                     break;
                 }
             }
-
 
 
         }

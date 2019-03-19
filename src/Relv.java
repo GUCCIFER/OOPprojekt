@@ -2,6 +2,7 @@ public class Relv {
     private String nimi;
     private int võimsus;
     private int täpsus;
+
     public Relv(String nimi, int võimsus, int täpsus) {
         this.nimi = nimi;
         this.võimsus = võimsus;
