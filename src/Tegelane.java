@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Tegelane {
     private String tegelane;
     private int elud;
     private int kaitse;
     private Relv relv;
+    private List<Ese> esemed;
+    public boolean strPotted;
+    public boolean atkPotted;
 
     public int löögiDamage() {
         return 1 + (int) ((Math.random()) * relv.getVõimsus());
@@ -15,7 +21,11 @@ public class Tegelane {
 
     boolean kasSaabPihta(Tegelane tegelane) {
         int a = ((int) (Math.random() * 20) + relv.getTäpsus() + 1);
-        if (a > tegelane.getKaitse()) {
+        if (this.atkPotted){
+            System.out.println(this.getTegelane() + " oli kasutanud täpsuseliksiiri ja sai pihta " + tegelane);
+            return true;
+        }
+        else if (a > tegelane.getKaitse()) {
             System.out.println(this.getTegelane() + " rünnaku veeretus on: " + a + " ning see läbis " + tegelane + " kaitsepunktid: " + tegelane.getKaitse());
             return true;
         }
@@ -27,6 +37,12 @@ public class Tegelane {
     public void Löök(Tegelane ohver) {
         if (kasSaabPihta(ohver)) {
             int kahju = löögiDamage();
+            if (this.strPotted){
+                System.out.println("Tänu jõueliksiirile oli " + this.getTegelane() + " rünnak eriti hävitav!");
+                kahju += 10;
+            }
+            this.atkPotted = false;
+            this.strPotted = false;
             ohver.setElud(ohver.getElud() - kahju);
             System.out.println(this.getTegelane() + " ründas ja " + ohver.getTegelane() + " sai " + kahju + " punkti kahju ja tal on nüüd " + ohver.getElud() + " elu");
         }
@@ -40,6 +56,9 @@ public class Tegelane {
         this.tegelane = tegelane;
         this.elud = elud;
         this.kaitse = kaitse;
+        this.esemed = new ArrayList<>();
+        this.strPotted = false;
+        this.atkPotted = false;
     }
 
     public Tegelane(String tegelane, int elud, int kaitse, Relv relv) {
@@ -47,6 +66,9 @@ public class Tegelane {
         this.elud = elud;
         this.kaitse = kaitse;
         this.relv = relv;
+        this.esemed = new ArrayList<>();
+        this.strPotted = false;
+        this.atkPotted = false;
     }
 
     public Relv getRelv() {
@@ -75,5 +97,15 @@ public class Tegelane {
 
     public void setKaitse(int kaitse) {
         this.kaitse = kaitse;
+    }
+
+    public void lisaEse(Ese ese){
+        this.esemed.add(ese);
+    }
+    public List<Ese> getEsemed(){
+        return esemed;
+    }
+    public void eemaldaEse(int i){
+        this.esemed.remove(i);
     }
 }
