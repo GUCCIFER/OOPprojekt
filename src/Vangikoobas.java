@@ -57,7 +57,7 @@ public class Vangikoobas {
          }
          else if (valik==1){
              Relv claws = new Relv("Küünised", 11, 5);
-             pahalased.add(new Tegelane("Subbucus", 6, 17, claws));
+             pahalased.add(new Tegelane("Succubus", 6, 17, claws));
              pahalasteLisamine(pahalased, valikud);
          }
          else if  (valik==2){
@@ -90,7 +90,7 @@ public class Vangikoobas {
             if (peaTegelane.getEsemed().get(target).getNimi().equals("Elueliksiir")){
                 peaTegelane.eemaldaEse(target);
                 peaTegelane.setElud(peaTegelane.getElud() + 12);
-                System.out.println(peaTegelane + "joob eliksiir ja see taastab ta tervise. Tal on nüüd " + peaTegelane.getElud() + " elu" );
+                System.out.println(peaTegelane + " joob eliksiiri ja see taastab ta tervise. Tal on nüüd " + peaTegelane.getElud() + " elu" );
                 valik(peaTegelane);
             }
             else if (peaTegelane.getEsemed().get(target).getNimi().equals("Jõueliksiir")){
@@ -113,7 +113,7 @@ public class Vangikoobas {
         Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase (Vahemikus 8-20)"));
         peaTegelane.setRelv(new Relv(sisestus("Sisetage oma Relva nimi"), intSisestus("Sisetage oma relva võimsus(4-20)"), intSisestus("Sisetage oma relva täpsus(Vahemikus 1-12)")));
         pood(peaTegelane);
-        Object[] valikud = {"Goblin","Subbucus","Loo enda tehtud vastane", "Jätka"};
+        Object[] valikud = {"Goblin","Succubus","Loo enda tehtud vastane", "Jätka"};
         pahalasteLisamine(pahalased, valikud);
         while (true) {
             System.out.println("------------------------------------------------------------");
