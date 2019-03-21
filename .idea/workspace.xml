@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9563f60a-3162-4d64-b4c8-fc8bc332e127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ese.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vangikoobas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vangikoobas.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Relv.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-58">
               <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
@@ -33,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ese.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -46,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vangikoobas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="89" column="51" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="51" />
+            <state relative-caret-position="210">
+              <caret line="124" column="92" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +84,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Relv.java" />
         <option value="$PROJECT_DIR$/src/Tegelane.java" />
-        <option value="$PROJECT_DIR$/src/Vangikoobas.java" />
         <option value="$PROJECT_DIR$/src/Ese.java" />
+        <option value="$PROJECT_DIR$/src/Vangikoobas.java" />
       </list>
     </option>
   </component>
@@ -125,7 +124,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553155556349" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553156306763" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -259,11 +258,19 @@
       <option name="project" value="LOCAL" />
       <updated>1553107846269</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="toString meetod lisatud">
+      <created>1553155648102</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1553155648102</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08977362" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -275,7 +282,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.58191127" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18771331" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,30 +309,14 @@
     <MESSAGE value="Tegelane.java on lisatud a muutuja mis salvestab löögiveeretuse ning mainis on peamiselt ilustusi sisse toodud, et lahingust oleks parem aru saada" />
     <MESSAGE value="Major update!!" />
     <MESSAGE value="Ese" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ese" />
+    <MESSAGE value="toString meetod lisatud" />
+    <option name="LAST_COMMIT_MESSAGE" value="toString meetod lisatud" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Relv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tegelane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vangikoobas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="89" column="51" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -336,6 +327,23 @@
           <folding>
             <element signature="e#88#89#0" expanded="true" />
             <element signature="e#115#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Relv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vangikoobas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="124" column="92" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

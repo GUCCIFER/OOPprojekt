@@ -91,17 +91,23 @@ public class Vangikoobas {
                 peaTegelane.eemaldaEse(target);
                 peaTegelane.setElud(peaTegelane.getElud() + 12);
                 System.out.println(peaTegelane + " joob eliksiiri ja see taastab ta tervise. Tal on nüüd " + peaTegelane.getElud() + " elu" );
-                valik(peaTegelane);
+                if (peaTegelane.getEsemed().size() > 0) {
+                    valik(peaTegelane);
+                }
             }
             else if (peaTegelane.getEsemed().get(target).getNimi().equals("Jõueliksiir")){
                 peaTegelane.eemaldaEse(target);
                 peaTegelane.strPotted = true;
-                valik(peaTegelane);
+                if (peaTegelane.getEsemed().size() > 0) {
+                    valik(peaTegelane);
+                }
             }
             else if (peaTegelane.getEsemed().get(target).getNimi().equals("Täpsuseliksiir")){
                 peaTegelane.eemaldaEse(target);
                 peaTegelane.atkPotted = true;
-                valik(peaTegelane);
+                if (peaTegelane.getEsemed().size() > 0) {
+                    valik(peaTegelane);
+                }
             }
 
         }
@@ -115,7 +121,10 @@ public class Vangikoobas {
         pood(peaTegelane);
         Object[] valikud = {"Goblin","Succubus","Loo enda tehtud vastane", "Jätka"};
         pahalasteLisamine(pahalased, valikud);
-        while (true) {
+        if (pahalased.size()==0){
+            System.out.println("Palju õnne! Sa ei lisanud ühtegi vastast! Seega oled võitnud");
+        }
+        while (pahalased.size()>0) {
             System.out.println("------------------------------------------------------------");
             System.out.println("Peategelane:");
             System.out.println(peaTegelane + "||Kaitsetase: " + peaTegelane.getKaitse() + "||Elud: " + peaTegelane.getElud());
@@ -125,7 +134,9 @@ public class Vangikoobas {
                 System.out.println(pahalane + "||Kaitsetase: " + pahalane.getKaitse() + "||Elud: " + pahalane.getElud());
             }
             System.out.println("------------------------------------------------------------");
-                valik(peaTegelane);
+            if (peaTegelane.getEsemed().size() > 0) {
+            valik(peaTegelane);
+            }
                 Object[] pahalased_massiiv = pahalased.toArray();
                 int target = sisestus("Keda sa ründad?", pahalased_massiiv);
                 peaTegelane.Löök(pahalased.get(target));
