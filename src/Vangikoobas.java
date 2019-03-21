@@ -114,7 +114,6 @@ public class Vangikoobas {
     }
 
     public static void main(String[] args) {
-        System.out.println("TUTORIAL");
         List<Tegelane> pahalased = new ArrayList<>();
         Tegelane peaTegelane = new Tegelane(sisestus("Sisetage oma tegelase nimi"), intSisestus("Sisetage oma tegelase elud"), intSisestus("Sisetage oma tegelase kaitse tase (Vahemikus 8-20)"));
         peaTegelane.setRelv(new Relv(sisestus("Sisetage oma Relva nimi"), intSisestus("Sisetage oma relva võimsus(4-20)"), intSisestus("Sisetage oma relva täpsus(Vahemikus 1-12)")));
