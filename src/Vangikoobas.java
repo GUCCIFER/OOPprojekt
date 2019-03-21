@@ -65,7 +65,7 @@ public class Vangikoobas {
                 pahalasteLisamine(pahalased, valikud);}
         }
     public static void pood(Tegelane peaTegelane){
-        Object[] valikud = {"Lobster","Jõueliksiir","Täpsuseeliksiir", "Jätka"};
+        Object[] valikud = {"Elueliksiir","Jõueliksiir","Täpsuseeliksiir", "Jätka"};
         int valik = sisestus("Osta endale poest midagi", valikud);
         if (valik==0){
             peaTegelane.lisaEse(new Ese("Elueliksiir"));
